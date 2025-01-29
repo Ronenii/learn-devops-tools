@@ -17,6 +17,8 @@ resources:
     cpu: 50m
     memory: 64Mi
 
-# env:
-#   - name: SOME_ENV_VAR
-#     value: "some_value"
+env:
+  - name: PRODUCTS_SERVICE_URL
+    value: "http://products-service:3001"
+  - name: ORDERS_SERVICE_URL
+    value: "http://orders-service:3002" 
