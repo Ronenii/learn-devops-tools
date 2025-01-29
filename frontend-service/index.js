@@ -4,6 +4,9 @@ const axios = require('axios');
 
 const app = express();
 
+const productServiceURL = process.env.PRODUCT_SERVICE_URL || 'http://localhost:3001';
+const orderServiceURL = process.env.ORDER_SERVICE_URL || 'http://localhost:3002';
+
 // Serve a simple static homepage from public/ directory
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -11,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/api/products', async (req, res) => {
   try {
     // Replace 'products-service' with the actual hostname or service name in Kubernetes
-    const response = await axios.get('http://products-service:3001/products');
+    const response = await axios.get(`${productServiceURL}/products`);
     res.json(response.data);
   } catch (error) {
     console.error(error);
@@ -23,7 +26,7 @@ app.get('/api/products', async (req, res) => {
 app.get('/api/orders', async (req, res) => {
   try {
     // Replace 'orders-service' with the actual hostname or service name in Kubernetes
-    const response = await axios.get('http://orders-service:3002/orders');
+    const response = await axios.get(`${orderServiceURL}/orders`);
     res.json(response.data);
   } catch (error) {
     console.error(error);
