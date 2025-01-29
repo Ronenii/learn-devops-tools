@@ -1,5 +1,4 @@
 apiVersion: v2
-name: multi-microservices
 version: 0.1.0
 description: Parent chart that depends on multiple subcharts
 
