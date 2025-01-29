@@ -1,0 +1,16 @@
+apiVersion: v2
+name: multi-microservices
+version: 0.1.0
+description: Parent chart that depends on multiple subcharts
+
+# Helm dependencies
+dependencies:
+  - name: frontend-service
+    version: 0.1.0
+    repository: file://charts/frontend-service
+  - name: product-service
+    version: 0.1.0
+    repository: file://charts/product-service
+  - name: order-service
+    version: 0.1.0
+    repository: file://charts/order-service

@@ -1,0 +1,12 @@
+dependencies:
+- name: frontend-service
+  repository: file://charts/frontend-service
+  version: 0.1.0
+- name: product-service
+  repository: file://charts/product-service
+  version: 0.1.0
+- name: order-service
+  repository: file://charts/order-service
+  version: 0.1.0
+digest: sha256:7818cc266ddb032f2d41f5d17b0f550157aa36110e090413b43c8d3555451d90
+generated: "2025-01-29T15:58:52.0008026+02:00"
