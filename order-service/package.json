@@ -1,5 +1,5 @@
 {
-    "name": "orders-service",
+    "name": "order-service",
     "version": "1.0.0",
     "description": "Simple Orders microservice",
     "main": "index.js",

@@ -1,5 +1,5 @@
 {
-    "name": "products-service",
+    "name": "product-service",
     "version": "1.0.0",
     "description": "Simple Products microservice",
     "main": "index.js",

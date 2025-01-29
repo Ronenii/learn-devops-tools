@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "products-service.fullname" . }}
+  name: {{ include "frontend-service.fullname" . }}
   labels:
-    app: {{ include "products-service.name" . }}
+    app: {{ include "frontend-service.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "products-service.name" . }}
+      app: {{ include "frontend-service.name" . }}
   template:
     metadata:
       labels:
-        app: {{ include "products-service.name" . }}
+        app: {{ include "frontend-service.name" . }}
     spec:
       containers:
-      - name: products-service
+      - name: frontend-service
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
