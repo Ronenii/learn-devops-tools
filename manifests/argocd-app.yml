@@ -10,8 +10,6 @@ spec:
     repoURL: https://github.com/Ronenii/learn-devops-tools
     targetRevision: HEAD
     path: helm-charts
-    helm:
-      releaseName: multi-microservices
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
