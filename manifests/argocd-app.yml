@@ -1,8 +1,8 @@
-apiVersion: agroproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: agro-app
-  namespace: agrocd
+  namespace: argocd
 spec:
   project: default
 
