@@ -1,0 +1,15 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: orders-scaler
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: order-deployment
+  minReplicaCount: 1  # Ensure at least one replica is always running
+  maxReplicaCount: 10 # Set the maximum number of replicas
+  triggers:
+  - type: cpu
+    metadata:
+      type: Utilization
+      value: "10"  # Target CPU utilization percentage
