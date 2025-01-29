@@ -19,6 +19,6 @@ resources:
 
 env:
   - name: PRODUCT_SERVICE_URL
-    value: "http://product-service:3001"
+    value: "http://main-product-service:3001"
   - name: ORDER_SERVICE_URL
-    value: "http://order-service:3002" 
+    value: "http://main-order-service:3002" 
